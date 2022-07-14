@@ -1,0 +1,22 @@
+.dropdown__menu {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  padding: rem(28px) rem(25px) rem(31px) rem(30px);
+  width: rem(273px);
+  top: 100%;
+  left: -9999px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  border-radius: rem(4px);
+}
+
+.product__option:hover .dropdown__menu {
+  opacity: 1;
+  right: 0;
+  left: initial;
+}

@@ -1,0 +1,142 @@
+.product__container {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        
+    }   
+}
+
+.product__col {
+    margin-right: rem(56px);
+    
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--left {
+        width: rem(420px);
+        height: rem(540px);
+        
+        @include tablets {
+            width: rem(318px);
+            height: rem(420px);
+        }
+    }
+
+    &--right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.product__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: rem(91px);
+    width: rem(91px);
+    background: #3A587E;
+    border-radius: 4px;
+    padding: rem(17px) rem(26px) rem(12px);
+    margin-bottom: rem(52px);
+    position: relative;
+    transition: background 0.3s;
+
+    &:hover {
+        background:#3465A3;
+        .dropdown__menu {
+            left: rem(93px); 
+            opacity: 1;
+        }
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.option__img {
+    display: block;
+    height: rem(38px);
+    width: rem(38px);
+    margin-bottom: rem(7px);
+}
+
+.option__text {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.product__title {
+    font-weight: 700;
+    font-size: rem(36px);
+    color: #292929;
+    text-transform: uppercase;
+    line-height: rem(43px);
+    margin-bottom: rem(24px);
+
+    @include tablets {
+        text-align: center;
+    }
+}
+
+
+
+.product__text {
+    color: #666666;
+    margin-bottom: rem(24px);
+    max-width: rem(368px);
+    line-height: rem(22px);
+
+    @include tablets {
+        text-align: center;
+        max-width: rem(528px);
+    }
+}
+
+.product__features-list {
+    display: flex;
+    margin-bottom: rem(24px);
+
+    @include tablets {
+        justify-content: center;
+    }
+    
+}
+
+.product__features-item {
+    line-height: rem(22px);
+    margin-right: rem(55px);
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.product__order {
+    display: flex;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.product__price {
+    font-weight: 300;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    text-transform: uppercase;
+    color: #151515;
+    margin-right: rem(56px);
+}
+

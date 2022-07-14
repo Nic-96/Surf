@@ -1,0 +1,10 @@
+.products-menu {
+  background: url(../../img/Products-menu.jpg);
+  position: relative;
+  color: #fff;
+}
+
+.products-menu__item {
+  width: rem(102px);
+  height: rem(652px);
+}

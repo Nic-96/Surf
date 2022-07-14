@@ -1,0 +1,32 @@
+.arrow {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    
+
+    .arrow__icon {
+        fill: none;
+        stroke: black;
+        stroke-width: 2;
+        width: rem(13px);
+        height: rem(27px);
+        
+    }
+
+    &--prev {
+        left: 0;
+        @include tablets {
+            left: rem(100px);
+        }
+    }
+
+    &--next {
+        right: 0;
+        @include tablets {
+            right: rem(120px);
+        }
+    }
+    @include tablets {
+        top: 30%;
+    }
+}

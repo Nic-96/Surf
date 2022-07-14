@@ -1,0 +1,272 @@
+.players__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.players__content {
+    width: rem(662px);
+    height: rem(392px);
+
+    @include tablets {
+        width: rem(594px);
+        height: rem(352px);
+    }
+
+    @include phones {
+        width: rem(394px);
+        height: rem(233px);
+    }
+}
+
+.player {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &.active .player__splash {
+        display: none;
+    }
+
+    &.paused {
+
+        .player__start {
+            width: rem(11px);
+            height: rem(16px);
+            border: none transparent;
+
+            @include tablets {
+                width: rem(10px);
+                height: rem(14px);
+            }
+        
+            @include phones {
+                width: rem(7px);
+                height: rem(10px);
+            }
+
+            &:after,
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: rem(4px);
+                top: 0;
+                bottom: 0;
+                background: white;
+
+            }
+
+            &::after {
+                right: 0;
+            }
+
+            &::before {
+                left: 0;
+            }
+        }
+    }
+}
+
+.player__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.player__splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./img/Splash.jpg) center center / cover no-repeat;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        background: url(./svg/PlayBig.svg) center center / cover no-repeat;
+        width: rem(75px);
+        height: rem(110px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include tablets {
+            width: rem(67px);
+            height: rem(98px);
+        }
+    
+        @include phones {
+            width: rem(45px);
+            height: rem(65px);
+        }
+
+    }
+}
+
+.player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rem(35px);
+    background: #404040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 rem(25px);
+
+    @include phones {
+        padding: 0 rem(10px);
+    }
+}
+
+.player__start {
+    display: block;
+    position: relative;
+    border: rem(10px) solid #404040;
+    width: rem(0px);
+    height: rem(16px);
+    border-left-color: white;
+    border-right-width: 0px;
+    padding: 0;
+    background: #404040;
+
+    @include tablets {
+        border-width: rem(10px);
+        height: rem(14px);
+    }
+
+    @include phones {
+        border-width: rem(7px);
+        height: rem(10px);
+    }
+}
+
+.player__playback {
+    position: relative;
+    height: rem(16px);
+    width: rem(446px);
+
+    &::before {
+        content: "";
+        height: rem(4px);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background: #626262;
+        display: block;
+        transform: translateY(-50%);
+    }
+
+    &-button {
+        width: rem(15px);
+        height: rem(15px);
+        border-radius: 50%;
+        background: #FEDB3F;
+        border: none;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 0;
+
+        @include tablets {
+            width: rem(14px);
+            height: rem(14px);
+        }
+    
+        @include phones {
+            width: rem(10px);
+            height: rem(10px);
+        }
+
+    }
+
+    @include tablets {
+        width: rem(400px);
+    }
+
+    @include phones {
+        width: rem(265px);
+    }
+}
+
+.player__volume {
+    display: flex;
+    align-items: center;
+}
+
+.player__volume-img {
+    width: rem(13px);
+    height: rem(16px);
+    margin-right: rem(25px);
+
+    @include tablets {
+        width: rem(12px);
+        height: rem(14px);
+        margin-right: rem(20px);
+    }
+
+    @include phones {
+        width: rem(8px);
+        height: rem(10px);
+        margin-right: rem(14px);
+    }
+}
+
+.player__volume-bar {
+    position: relative;
+    height: rem(16px);
+    width: rem(58px);
+
+    &::before {
+        content: "";
+        height: rem(4px);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background: #626262;
+        display: block;
+        transform: translateY(-50%);
+    }
+
+    @include tablets {
+        height: rem(16px);
+        width: rem(55px);
+    }
+
+    @include phones {
+        height: rem(16px);
+        width: rem(36px);
+    }
+
+}
+
+.player__volume-button {
+    width: rem(15px);
+    height: rem(15px);
+    border-radius: 50%;
+    background: #FEDB3F;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+
+    @include tablets {
+        width: rem(14px);
+        height: rem(14px);
+    }
+
+    @include phones {
+        width: rem(10px);
+        height: rem(10px);
+    }
+}

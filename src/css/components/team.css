@@ -1,0 +1,22 @@
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin-right: rem(20px);
+  position: relative;
+  max-width: rem(220px);
+}
+
+.team__member {
+  height: rem(290px);
+}

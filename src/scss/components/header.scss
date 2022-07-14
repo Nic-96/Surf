@@ -1,0 +1,75 @@
+.header {
+    @include tablets {
+        background: #1968B1;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(27px) 0;
+}
+
+.phone-number.header__phone-number {
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu {
+    margin: 0 30px;
+    padding-top: 5px;
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: rem(20px);
+}
+
+.menu__item {
+    margin-right: rem(22px);
+    margin-bottom: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu__link {
+    white-space: nowrap;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: rem(22px);
+    display: flex;
+    align-items: center;
+}
+
+.phone-number__icon {
+    flex-shrink: 0;
+}
+
+.phone-number__icon-elem {
+    width: rem(13px);
+    height: rem(14px);
+    margin-right: rem(6px);
+    fill: white;
+
+    &--black {
+        fill: black;
+    }
+}
+
+.phone-number__text {
+    white-space: nowrap;
+}
+

@@ -1,0 +1,13 @@
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__img {
+  width: rem(20px);
+  height: rem(20px);
+}

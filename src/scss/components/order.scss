@@ -1,0 +1,16 @@
+.order {
+    background: url(./img/Formimg.jpg) center top no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .section__title {
+        color: inherit;
+    }
+}
+
+.order__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
